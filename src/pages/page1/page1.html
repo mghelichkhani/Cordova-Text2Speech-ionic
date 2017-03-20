@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>AAC</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div padding>
+    <h3>Testing Cordova Text-to-Speech Plugin</h3>
+    <span>Cordova needs access to native features. So it's normal if you don't here anything on web build.</span>
+
+    <p>
+      Write your text and click to Speak Up!
+    </p>
+    <ion-input #speechtext class="simple" type="text" placeholder="write something"></ion-input>
+    <button ion-button secondary block (click)="speakUp(speechtext.value)"><ion-icon name="megaphone"></ion-icon></button>
+  </div>
+</ion-content>
