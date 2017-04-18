@@ -1,0 +1,12 @@
+<ion-grid>
+  <ion-row>
+    <ion-col col-12 col-sm-4 col-md-2 col-lg-1 *ngFor="let symbol of symbols;">
+      <ion-card (click)="this.symbolsService.addToSentence(symbol)" >
+        <img src="{{ symbol.thumbnailUrl }}"/>
+        <ion-card-content>
+          <p>{{ symbol.title }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>

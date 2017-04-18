@@ -8,6 +8,12 @@
 </ion-header>
 
 <ion-content padding>
+  <div padding sentenceMaker>
+    <div symbol *ngFor="let word of symbolsService.sentence; let i = index" (click)="removeFromSentence(i)">
+      <img src="{{ word.thumbnailUrl }}"<br />
+      <span>{{ word.title }}</span>
+    </div>
+  </div>
   <div padding>
     <h3>Testing Cordova Text-to-Speech Plugin</h3>
     <span>Cordova needs access to native features. So it's normal if you don't here anything on web build.</span>
@@ -17,5 +23,7 @@
     </p>
     <ion-input #speechtext class="simple" type="text" placeholder="write something"></ion-input>
     <button ion-button secondary block (click)="speakUp(speechtext.value)"><ion-icon name="megaphone"></ion-icon></button>
+    <button ion-button primary block (click)="addToSentence()">Add to Sentence</button>
   </div>
+  <symbols></symbols>
 </ion-content>

@@ -1,3 +1,15 @@
 page-page1 {
+  [symbol] {
+    display: inline-block;
+    margin: 0.5rem;
+    border: 1px dashed gray;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+  }
+  [sentenceMaker] {
+    border: 1px solid gray;
+    border-radius: 5px;
 
+  }
 }
